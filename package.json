@@ -1,18 +1,19 @@
 {
-  "version": "3.0.2",
+  "version": "0.0.0",
   "name": "@getable/button",
-  "description": "button ui piece",
+  "description": "reactjs button component",
   "author": {
     "name": "Cristi Scheye",
     "email": "cristi@getable.com"
   },
-  "repository": "Getable/button",
-  "license": "Artistic-2.0",
+  "repository": "getable/button",
+  "license": "Artistic 2.0",
   "directories": {
     "test": "test"
   },
   "keywords": [
     "button",
+    "component",
     "piece",
     "react"
   ],
@@ -31,7 +32,8 @@
     "doctoc": "doctoc README.md && if [ -f CONTRIBUTING.md ]; then doctoc CONTRIBUTING.md; fi && if [[ $(git diff --shortstat 2> /dev/null | tail -n1) != '' ]]; then git add README.md CONTRIBUTING.md && git commit --no-verify -m'table of contents update'; fi",
     "gitPull": "git pull --rebase origin master",
     "gitPush": "git push --follow-tags --no-verify && git push --tags --no-verify",
-    "release": "source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run lint && npm test && npm_release $@"
+    "build-es5": "babel index.jsx > index.es5",
+    "release": "source ./scripts.sh && npm run requireGitClean && npm run gitPull && npm run dmn && npm run doctoc && npm run build-es5 && npm run lint && npm test && npm_release $@"
   },
   "config": {
     "notes": "important to correct the path of npm so that the git hook doesn't error",
@@ -41,8 +43,9 @@
       "update": "PATH=$PATH:/usr/local/bin:/usr/local/sbin && npm install"
     }
   },
-  "main": "index.jsx",
-  "browser": "index.jsx",
+  "license": "Artistic-2.0",
+  "main": "index.es5",
+  "browser": "index.es5",
   "devDependencies": {
     "babel": "^5.2.9",
     "babelify": "^6.0.2",
@@ -60,9 +63,5 @@
     "tap-closer": "^1.0.0",
     "tap-spec": "^3.0.0",
     "tape": "^4.0.0"
-  },
-  "dependencies": {
-    "@getable/variables": "^1.0.1",
-    "lodash": "^3.8.0"
   }
 }
