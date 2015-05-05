@@ -1,0 +1,44 @@
+@import '@getable/variables';
+
+.button {
+  border-radius: 3px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: .25em 1em;
+  font-size: 1.15rem;
+  color: #4F4F4F;
+  font-weight: 500;
+  text-shadow: 0 0 0;
+  font-family: 'Lato', sans-serif;
+  /* this is ~38px */
+  line-height: 2.4;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-transition: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: none;
+          transition: none;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.20);
+  cursor: pointer;
+  /* button text is not selectable */
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+.button-cta {
+  color: var(--color-white10);
+  background-color: var(--color-cta);
+  border: solid 1px var(--color-ctaHighlight);
+}
+
+
+.button-cta:hover {
+  border-color: var(--color-ctaAccent);
+}
+
+
