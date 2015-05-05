@@ -58,6 +58,7 @@ function generate_git_changelog(){
   node -e "console.log(require('fs').readFileSync(process.argv[1]).toString().replace(/(#.*?\n\n)/, '\$1' + process.argv.slice(2).join('\n') + '\n\n'))" "$CHANGELOG" "$head" "$changes" > $tmp_changelog
 
   # open the changelog in the editor for editing
+  test -z "$EDITOR" && EDITOR=vi
   test -n "$EDITOR" && $EDITOR $tmp_changelog
   mv $tmp_changelog "$CHANGELOG"
 }
