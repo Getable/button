@@ -36,7 +36,11 @@ export default class Button extends Component {
 Button.propTypes = {
   text: PropTypes.string.isRequired
   , classes: PropTypes.array.isRequired
-  , onClick: PropTypes.func.isRequired
+  , onClick: (props, propName) => {
+    if (props.type !== 'submit' && !props[propName]) {
+      return new Error('if the type is not `submit`, you must define onClick')
+    }
+  }
   , type: PropTypes.string
 }
 
