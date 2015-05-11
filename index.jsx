@@ -25,18 +25,19 @@ export default class Button extends Component {
       <button
         className={this.state.className}
         onClick={this.props.onClick}
+        type={this.props.type}
         >
           {this.props.text}
       </button>
-
       )
   }
 }
 
 Button.propTypes = {
-  text: PropTypes.string
-  , classes: PropTypes.array
-  , onClick: PropTypes.func
+  text: PropTypes.string.isRequired
+  , classes: PropTypes.array.isRequired
+  , onClick: PropTypes.func.isRequired
+  , type: PropTypes.string
 }
 
 Button.defaultProps = {
