@@ -46,7 +46,7 @@
   "main": "index.es5",
   "browser": "index.es5",
   "devDependencies": {
-    "babel": "^5.2.9",
+    "babel": "^5.4.3",
     "babelify": "^6.0.2",
     "browserify": "^9.0.8",
     "dmn": "^1.0.5",
