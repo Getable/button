@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react'
 import {addons} from 'react/addons'
+import omit from 'lodash/object/omit'
 const {shouldComponentUpdate} = addons.PureRenderMixin
 const namespace = 'button'
 
@@ -10,23 +11,10 @@ export default class Button extends Component {
     return shouldComponentUpdate.apply(this, args)
   }
 
-  constructor (props) {
-    super()
-
-    const classes = [namespace].concat(props.classes)
-
-    this.state = {
-      className: classes.join(' ')
-    }
-  }
-
   render () {
+    const classes = [namespace].concat(this.props.classes)
     return (
-      <button
-        className={this.state.className}
-        onClick={this.props.onClick}
-        type={this.props.type}
-        >
+      <button {...omit(this.props, 'text')} className={classes.join(' ')}>
           {this.props.text}
       </button>
       )
