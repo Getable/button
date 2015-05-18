@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.4.0 | 2015-05-18
+* add: any prop can now be passed. This allows things like `disabled`.
+* fix: classes now re-compute on render
+
 ## v3.3.3 | 2015-05-18
 * actually fix the babel error by updating babel
 * internal: add watch script
@@ -17,6 +21,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
