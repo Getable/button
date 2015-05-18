@@ -30,6 +30,7 @@
 
 }
 
+/* colors */
 .button-cta {
   color: var(--color-white10);
   background-color: var(--color-cta);
@@ -41,4 +42,46 @@
   border-color: var(--color-ctaAccent);
 }
 
+.button-grey.hollow {
+  border-color: var(--color-grey30);
+  color: var(--color-grey70);
+  background-color: transparent;
+  box-shadow: none;
+}
+.button-grey.hollow:active,
+.button-grey.hollow.active {
+  background-color: var(--color-grey50);
+  border-color: var(--color-grey50);
+  color: white;
+}
 
+.button-grey.hollow:hover,
+.button-grey.hollow.hover,
+.button-grey.hollow:focus,
+.button-grey.hollow.focus {
+  background-color: var(--color-grey30);
+  color: white;
+}
+
+/* icons */
+/*
+.button.btn-next:after,
+.button.btn-more:after {
+  font-family: "Elusive-Icons";
+  float: right;
+  margin-left: var(--padding-normal);
+  line-height: 40px;
+}
+.button.btn-next:after {
+  elusive icons 'icon-play' char code
+  content: "\e05d";
+}
+.button.btn-more:after {
+  content: "\e0cc";
+}
+.button.btn-next .btn-label,
+.button.btn-more .btn-label {
+  float: left;
+}
+
+*/
