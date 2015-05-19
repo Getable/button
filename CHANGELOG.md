@@ -1,5 +1,12 @@
 # Changelog
 
+## v3.4.2 | 2015-05-19
+* update scripts file
+* 3.4.1
+* update/standardize css classes
+* change entry files
+* add variables package
+
 ## 2015-05-19
 * 3.4.1
 
@@ -92,6 +99,7 @@
 
 ### 0.0.0
 Init
+
 
 
 
