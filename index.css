@@ -1,7 +1,8 @@
 @import '@getable/variables';
 
-.button {
+.btn {
   border-radius: 3px;
+  border: 1px solid;
   display: inline-block;
   box-sizing: border-box;
   padding: .25em 1em;
@@ -30,58 +31,68 @@
 
 }
 
+/* sizing */
+.btn--fullCenter {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 /* colors */
-.button-cta {
+.button-cta,
+.btn--cta {
   color: var(--color-white10);
   background-color: var(--color-cta);
   border: solid 1px var(--color-ctaHighlight);
 }
 
 
-.button-cta:hover {
+.button-cta:hover,
+.btn--cta:hover {
   border-color: var(--color-ctaAccent);
 }
 
-.button-grey.hollow {
+.btn--grey.hollow {
   border-color: var(--color-grey30);
   color: var(--color-grey70);
   background-color: transparent;
   box-shadow: none;
 }
-.button-grey.hollow:active,
-.button-grey.hollow.active {
+.btn--grey.hollow:active,
+.btn--grey.hollow.active {
   background-color: var(--color-grey50);
   border-color: var(--color-grey50);
   color: white;
 }
 
-.button-grey.hollow:hover,
-.button-grey.hollow.hover,
-.button-grey.hollow:focus,
-.button-grey.hollow.focus {
+.btn--grey.hollow:hover,
+.btn--grey.hollow.hover,
+.btn--grey.hollow:focus,
+.btn--grey.hollow.focus {
   background-color: var(--color-grey30);
   color: white;
 }
 
 /* icons */
-/*
-.button.btn-next:after,
-.button.btn-more:after {
-  font-family: "Elusive-Icons";
+.btn.icon-less:after,
+.btn.icon-more:after {
   float: right;
   margin-left: var(--padding-normal);
   line-height: 40px;
+  font-weight: var(--fontWeight-lato-bold);
 }
-.button.btn-next:after {
-  elusive icons 'icon-play' char code
-  content: "\e05d";
-}
-.button.btn-more:after {
-  content: "\e0cc";
-}
-.button.btn-next .btn-label,
-.button.btn-more .btn-label {
+
+.btn.icon-more .btn-label,
+.btn.icon-less .btn-label {
   float: left;
 }
 
-*/
+.btn.icon-more:after {
+  content: "\25bc";
+}
+
+.btn.icon-less:after {
+  content: "\25b2";
+}
+

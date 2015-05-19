@@ -2,7 +2,7 @@ import React, {PropTypes, Component} from 'react'
 import {addons} from 'react/addons'
 import omit from 'lodash/object/omit'
 const {shouldComponentUpdate} = addons.PureRenderMixin
-const namespace = 'button'
+const namespace = 'btn'
 
 export default class Button extends Component {
   // use the pure-render mixin without the mixin. This allows us to use es6
@@ -15,7 +15,7 @@ export default class Button extends Component {
     const classes = [namespace].concat(this.props.classes)
     return (
       <button {...omit(this.props, 'text')} className={classes.join(' ')}>
-          {this.props.text}
+          <span className="btn-label">{this.props.text}</span>
       </button>
       )
   }
